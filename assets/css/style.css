@@ -12,7 +12,7 @@ body {
 nav { 
     width: calc(100% - 90px);
     height: 100px;
-    background-color: #8B3E3E;
+    background-color: #dbdbdb;
     display: grid;
     grid-template-columns: auto 1fr 40px;
     align-items: center;
@@ -31,7 +31,7 @@ nav links {
 }
 
 nav links a {
-    color: #ffee87;
+    color: #1E1E1E;
     text-decoration: none;
     margin: 0 10px;
     padding-left: 15px;
@@ -60,7 +60,7 @@ info square:hover {
 }
 
 info square svg {
-    stroke: #ffee87;
+    stroke: #1E1E1E;
     width: 30px;
     height: 30px;
     transition: 0.3s;
@@ -76,7 +76,7 @@ introduction {
 
 introduction img {
     border-radius: 100%;
-    border: 1px solid #C4C4C4;
+    border: 2px solid #ffee87;
 }
 
 introduction text {
@@ -128,7 +128,7 @@ slogan {
     justify-content: center;
     letter-spacing: 10px;
     font-size: larger;
-    background-color: #dbdbdb;
+    background-color: #fff3a6;
     padding: 95px 0;
     color: #333333;
 }

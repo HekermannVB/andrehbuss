@@ -1,0 +1,240 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--white);
+}
+
+nav { 
+    width: calc(100% - 90px);
+    height: 100px;
+    background-color: #8B3E3E;
+    display: grid;
+    grid-template-columns: auto 1fr 40px;
+    align-items: center;
+    padding: 0 45px;
+    border-bottom: 0.5px solid #BFAF6F;
+}
+
+logo {
+    margin: 0 10px;
+}
+
+nav links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav links a {
+    color: #ffee87;
+    text-decoration: none;
+    margin: 0 10px;
+    padding-left: 15px;
+    cursor: pointer;
+    transition: 0.7s;
+}
+
+a:hover {
+    color: #A3A3A3;
+}
+
+info square {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+info square:hover {
+    svg {
+        stroke: #A3A3A3;
+    }
+}
+
+info square svg {
+    stroke: #ffee87;
+    width: 30px;
+    height: 30px;
+    transition: 0.3s;
+}
+
+introduction {
+    display: flex;
+    justify-content: space-around;
+    background-color: #1E1E1E;
+    padding: 20px;
+    color: #E6E6E6;
+}
+
+introduction img {
+    border-radius: 100%;
+    border: 1px solid #C4C4C4;
+}
+
+introduction text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+}
+
+introduction text h1 {  
+    display: flex; 
+    justify-content: center;
+    color: #ffee87;
+}
+
+introduction text h3 {
+    display: flex;
+    justify-content: center;
+}
+
+menu {
+    display: none;
+}
+
+menu square {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+menu square:hover {
+    svg {
+        stroke: var(--primary-color);
+    }
+}
+
+menu square svg {
+    stroke: var(--white);
+    width: 30px;
+    height: 30px;
+    transition: 0.3s;
+}
+
+slogan {
+    display: flex;
+    justify-content: center;
+    letter-spacing: 10px;
+    font-size: larger;
+    background-color: #dbdbdb;
+    padding: 95px 0;
+    color: #333333;
+}
+
+about {
+    display: flex;
+    justify-content: space-around;
+    background-color: #1E1E1E;
+    padding: 20px;
+    color: #E6E6E6;
+}
+
+about img {
+    border-radius: 100%;
+    border: 1px solid #C4C4C4;
+}
+
+about text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+}
+
+about text h1 {
+    display: flex; 
+    justify-content: center;
+}
+
+about text p {
+    display: flex;
+    justify-content: center;
+    text-align: justify;
+}
+
+@media only screen and (max-width: 800px) {
+    body {
+        flex-direction: column;
+        align-items: center;
+        overflow-x: hidden;
+    }
+    
+    nav {
+        width: 100%;
+        height: auto;
+        padding: 15px 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        overflow: hidden;
+        box-sizing: border-box;
+    }
+    
+    logo img {
+        width: 120px;
+        height: auto;
+    }
+    
+    menu {
+        display: flex !important;
+    }
+    
+    links {
+        display: none !important;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: #8B3E3E;
+        padding: 10px 0;
+        text-align: center;
+    }
+    
+    links a {
+        display: block;
+        padding: 10px;
+    }
+    
+    introduction {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 15px;
+    }
+    
+    introduction img {
+        width: 200px;
+        height: 200px;
+    }
+    
+    slogan {
+        font-size: 1.2rem;
+        text-align: center;
+        padding: 50px 20px;
+    }
+    
+    about {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    about img {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+

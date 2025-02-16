@@ -135,33 +135,63 @@ slogan {
 
 about {
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    align-items: center; /* Centraliza o conteúdo horizontalmente */
     background-color: #1E1E1E;
     padding: 20px;
     color: #E6E6E6;
 }
 
-about img {
-    border-radius: 100%;
-    border: 1px solid #C4C4C4;
+about h1 {
+    text-align: center; /* Centraliza o título */
+    margin-bottom: 40px;
 }
 
-about text {
+.columns {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Cria 3 colunas */
+    gap: 20px; /* Espaçamento entre as colunas */
+}
+
+.column {
+    text-align: center; /* Centraliza os itens da coluna */
+}
+
+#column-top-svg{
+    width: 50px;
+    height: 50px;
+}
+
+.column li svg {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    stroke: #32a852;
+}
+
+.icon {
+    font-size: 64px; /* Tamanho maior para os ícones */
+    display: block;
+    margin: 0 auto 10px; /* Centraliza e adiciona espaçamento abaixo */
+}
+
+.column h3 {
+    text-align: center;
+}
+
+.column ul {
+    list-style: none;
+    padding: 0;
+    text-align: left; /* Alinha os itens da lista à esquerda */
+}
+
+.column li {
     display: flex;
-    flex-direction: column;
-    justify-content: center; 
+    align-items: flex-start; /* Alinha o ícone e o texto verticalmente */
+    gap: 8px; /* Espaçamento entre o ícone e o texto */
+    margin-bottom: 16px;
 }
 
-about text h1 {
-    display: flex; 
-    justify-content: center;
-}
-
-about text p {
-    display: flex;
-    justify-content: center;
-    text-align: justify;
-}
 
 @media only screen and (max-width: 800px) {
     body {
@@ -234,6 +264,31 @@ about text p {
     about img {
         width: 200px;
         height: 200px;
+    }
+
+    .columns {
+        grid-template-columns: 1fr; 
+    }
+
+    #column-top-svg {
+        width: 40px; 
+        height: 40px;
+    }
+
+    .icon {
+        font-size: 48px; 
+    }
+
+    about {
+        padding: 15px; 
+    }
+
+    .column li {
+        margin-bottom: 12px;
+    }
+
+    .column ul {
+        text-align: left;
     }
 }
 

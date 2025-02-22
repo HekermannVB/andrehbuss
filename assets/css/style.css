@@ -372,7 +372,7 @@ courses li svg {
         }
 
         courses li {
-            justify-content: center; /* Centraliza os itens da lista */
+            justify-content: left; /* Centraliza os itens da lista */
         }
 
     }

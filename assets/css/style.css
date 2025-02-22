@@ -192,6 +192,64 @@ about h1 {
     margin-bottom: 16px;
 }
 
+courses {
+    display: flex;
+    justify-content: space-around; /* Texto à esquerda e imagem à direita */
+    align-items: center; /* Centraliza verticalmente */
+    background-color: #1E1E1E;
+    color: #E6E6E6;
+    padding-top: 50px;
+}
+
+/* Alinha o conteúdo de texto à esquerda */
+courses text {
+    display: flex;
+    flex-direction: column;
+    justify-content: left; /* Alinha o texto ao topo */
+}
+
+/* Estilo do título */
+courses text h1 {
+    color: #ffee87;
+    margin-bottom: 20px; /* Espaço entre o título e a lista */
+}
+
+courses ul {
+    list-style: none;
+    padding: 0;
+}
+
+courses li {
+    display: flex; /* Ativa o Flexbox */
+    align-items: center; /* Alinha verticalmente */
+    gap: 8px; /* Espaçamento entre o ícone e o texto */
+    margin-bottom: 8px; /* Espaçamento entre os itens */
+}
+
+courses li svg {
+    font-size: 20px; /* Tamanho dos ícones */
+    color: #ffee87; /* Cor dos ícones */
+    flex-shrink: 0;
+    align-items: flex-start;
+}
+
+/* Centraliza a imagem verticalmente */
+.image-container {
+    display: flex;
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+}
+
+/* Borda da imagem */
+.image-container img {
+    border: 2px solid #ffee87;
+    background-size: cover;
+    border-radius: 100%;
+    height: 300px;
+    width: 300px;
+}
+  
+  
 
 @media only screen and (max-width: 800px) {
     body {
@@ -290,6 +348,33 @@ about h1 {
     .column ul {
         text-align: left;
     }
-}
+
+        courses {
+            flex-direction: column; /* Empilha os itens verticalmente */
+            text-align: center; /* Centraliza o texto */
+            padding: 30px 10px; /* Padding menor em telas pequenas */
+        }
+
+        courses text {
+            justify-content: center; /* Centraliza verticalmente */
+            align-items: center; /* Alinha o texto ao centro */
+            max-width: 100%; /* Ocupa toda a largura */
+        }
+
+        .image-container {
+            margin-top: 20px; /* Espaço entre o texto e a imagem */
+            order: -1;
+        }
+
+        .image-container img {
+            height: 200px;
+            width: 200px;
+        }
+
+        courses li {
+            justify-content: center; /* Centraliza os itens da lista */
+        }
+
+    }
 
 

@@ -351,14 +351,21 @@ courses li svg {
 
         courses {
             flex-direction: column; /* Empilha os itens verticalmente */
-            text-align: center; /* Centraliza o texto */
+         /* Centraliza o texto */
             padding: 30px 10px; /* Padding menor em telas pequenas */
         }
 
         courses text {
-            justify-content: center; /* Centraliza verticalmente */
+            display: flex;
+            flex-direction: column;
+             /* Centraliza verticalmente */
             align-items: center; /* Alinha o texto ao centro */
             max-width: 100%; /* Ocupa toda a largura */
+        }
+
+        courses text h1{
+            text-align: center; 
+            width: 100%;
         }
 
         .image-container {
@@ -372,8 +379,16 @@ courses li svg {
         }
 
         courses li {
-            justify-content: left; /* Centraliza os itens da lista */
+            text-align: left;
+            list-style: none; /* Centraliza os itens da lista */
         }
+
+        courses ul {
+            text-align: left;
+            width: 100%; /* Garante o alinhamento dos itens da lista */
+            padding-left: 20px;
+        }
+
 
     }
 

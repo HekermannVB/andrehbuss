@@ -1,3 +1,8 @@
+* {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -10,7 +15,7 @@ body {
 }
 
 nav { 
-    width: calc(100% - 90px);
+    width: 100%;
     height: 100px;
     background-color: #dbdbdb;
     display: grid;
@@ -314,6 +319,7 @@ courses li svg {
     }
     
     introduction {
+        display: flex;
         flex-direction: column;
         align-items: center;
         text-align: center;
@@ -335,6 +341,7 @@ courses li svg {
     }
     
     about {
+        display: flex;
         flex-direction: column;
         align-items: center;
         text-align: center;
@@ -371,6 +378,7 @@ courses li svg {
     }
 
         courses {
+            display: flex;
             flex-direction: column; /* Empilha os itens verticalmente */
          /* Centraliza o texto */
             padding: 30px 10px; /* Padding menor em telas pequenas */

@@ -192,6 +192,24 @@ about h1 {
     margin-bottom: 16px;
 }
 
+professional-history {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    background-color: #1E1E1E;
+    color: #E6E6E6;
+}
+
+professional-history logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 15px; 
+    margin-top: 10px;
+}
+
 courses {
     display: flex;
     justify-content: space-around; /* Texto à esquerda e imagem à direita */
@@ -311,6 +329,9 @@ courses li svg {
         font-size: 1.2rem;
         text-align: center;
         padding: 50px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
     
     about {
@@ -388,7 +409,36 @@ courses li svg {
             width: 100%; /* Garante o alinhamento dos itens da lista */
             padding-left: 20px;
         }
-
+        
+        #logos-wrapper {
+            overflow: hidden;
+            width: 100%;
+            background-color: #1E1E1E;
+            padding: 10px 0;
+        }
+    
+        #logos-container {
+            display: flex;
+            flex-wrap: nowrap;
+            gap: 20px;
+            width: max-content;
+            animation: scroll-logos 15s linear infinite; /* Define a animação */
+        }
+    
+        #logos-container img {
+            width: 150px; 
+            height: auto;
+        }
+    
+        /* Animação para mover as logos */
+        @keyframes scroll-logos {
+            from {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(-50%);
+            }
+        }
 
     }
 

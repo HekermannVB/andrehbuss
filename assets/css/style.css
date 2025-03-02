@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 * {
     max-width: 100%;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
 html {
@@ -11,7 +14,7 @@ body {
     margin: 0;
     display: flex;
     flex-direction: column;
-    background-color: var(--white);
+    background-color: #fff;
 }
 
 nav { 
@@ -130,12 +133,39 @@ menu square svg {
 
 slogan {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     letter-spacing: 10px;
     font-size: larger;
     background-color: #fff3a6;
     padding: 95px 0;
     color: #333333;
+}
+
+slogan svg {
+    
+    width: 40px;
+    height: 40px;
+    stroke: #333333;
+    animation: jump 1s infinite alternate, colorChange 1s infinite alternate;
+}
+
+@keyframes jump {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(10px);
+    }
+}
+
+@keyframes colorChange {
+    0% {
+        stroke: #333333;
+    }
+    100% {
+        stroke: #5e5e5e;
+    }
 }
 
 about {
@@ -147,9 +177,17 @@ about {
     color: #E6E6E6;
 }
 
-about h1 {
-    text-align: center; /* Centraliza o título */
+.about-me h1 {
+    text-align: center;
     margin-bottom: 40px;
+    opacity: 0;
+    transform: translateX(100px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.about-me.show h1 {
+    opacity: 1;
+    transform: translateX(0);
 }
 
 .columns {
@@ -202,8 +240,8 @@ professional-history {
     flex-direction: column;
     text-align: center;
     align-items: center;
-    background-color: #1E1E1E;
-    color: #E6E6E6;
+    background-color: #fff3a6;
+    color: #333333;
 }
 
 professional-history logos {
@@ -213,6 +251,10 @@ professional-history logos {
     align-items: center;
     gap: 15px; 
     margin-top: 10px;
+}
+
+professional-history #logos-container #ecologic {
+    margin-left: -30px;
 }
 
 courses {
@@ -272,7 +314,88 @@ courses li svg {
     width: 300px;
 }
   
-  
+footer {
+    width: 100%;
+    color: #dbdbdb;
+}
+
+.footer-link {
+    text-decoration: none;
+}
+
+footer-content {
+    background-color: #333333;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 3rem 3.5rem;
+}
+
+footer-contacts h1 {
+    margin-bottom: 0.75rem;
+}
+
+social-media {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+social-media .footer-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.5rem;
+    width: 2.5rem;
+    color: #dbdbdb;
+    border-radius: 50%;
+    transition: all 0.4s;
+}
+
+social-media .footer-link svg {
+    width: 20px;
+    height: 20px;
+}
+
+social-media .footer-link:hover {
+    opacity: 0.8;
+}
+
+social-media #instagram {
+    background: linear-gradient(#7F37C9, #FF2992, #FF9807);
+}
+
+social-media #facebook {
+    background-color: #4267B3;
+}
+
+social-media #phone {
+    background-color: #25D366;
+}
+
+.footer-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    list-style: none;
+}
+
+.footer-list .footer-link {
+    color: #a8a29e;
+    transition: all 0.4s;
+}
+
+.footer-list .footer-link:hover {
+    color: #ffee87;
+}
+
+footer-copyright {
+    display: flex;
+    justify-content: center;
+    background-color: #0e0c0c;
+    font-size: 0.9rem;
+    padding: 1.5rem;
+
+}
 
 @media only screen and (max-width: 800px) {
     body {
@@ -333,14 +456,16 @@ courses li svg {
     
     slogan {
         font-size: 1.2rem;
+        letter-spacing: 5px;
         text-align: center;
-        padding: 50px 20px;
+        padding: 30px 0px;
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
     slogan svg {
+        margin-top: -20px;
         width: 40px;
         height: 40px;
         stroke: #333333;
@@ -361,7 +486,7 @@ courses li svg {
             stroke: #333333;
         }
         100% {
-            stroke: #7e7e7e;
+            stroke: #5e5e5e;
         }
     }
     
@@ -444,10 +569,17 @@ courses li svg {
         }
         
         #logos-wrapper {
-            overflow: hidden;
+            overflow-x: auto;
+            white-space: nowrap;
             width: 100%;
-            background-color: #1E1E1E;
-            padding: 10px 0;
+            scroll-behavior: smooth;
+            padding: 10px 0px 0px 100px;
+            scrollbar-width: none; /* Oculta a barra de rolagem nos navegadores compatíveis */
+            -ms-overflow-style: none;
+        }
+
+        #logos-wrapper::-webkit-scrollbar {
+            display: none; /* Oculta a barra de rolagem no Chrome/Safari */
         }
     
         #logos-container {
@@ -455,12 +587,15 @@ courses li svg {
             flex-wrap: nowrap;
             gap: 20px;
             width: max-content;
-            animation: scroll-logos 15s linear infinite; /* Define a animação */
+            animation: scroll-logos 8s linear infinite; /* Define a animação */
         }
-    
-        #logos-container img {
-            width: 150px; 
-            height: auto;
+
+        #logos-container:hover {
+            animation-play-state: paused;
+        }
+
+        #logos-container #ecologic {
+            margin-left: -30px;
         }
     
         /* Animação para mover as logos */
@@ -469,10 +604,22 @@ courses li svg {
                 transform: translateX(0);
             }
             to {
-                transform: translateX(-50%);
+                transform: translateX(-100%);
             }
         }
 
+        footer-content {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+
     }
+
+@media only screen and (max-width: 426px) {
+    footer-content {
+        grid-template-columns: repeat(1, 1fr);
+        padding: 3rem 2rem;
+    }
+}
 
 

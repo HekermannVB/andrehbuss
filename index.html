@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="https://unpkg.com/lucide@latest"></script>
     <script src="assets/js/icons.js"></script>
+    <script src="assets/js/about.js"></script>
+    <script src="assets/js/logos.js"></script>
 </head>
 <body>
     <form>
@@ -24,7 +26,7 @@
             <links>
                 <a class="a" href="#about">Sobre mim</a>
                 <a class="a" href="propostas.html">Propostas</a>
-                <a class="a" href="#">Vídeos</a>
+                <a class="a" href="videos.html">Vídeos</a>
             </links>
             
             <info>
@@ -38,7 +40,7 @@
             <img src="https://i1.rgstatic.net/ii/profile.image/1180712434700289-1658515189063_Q512/Andre-Hekermann-Buss.jpg" height="300px" width="300px" alt="Foto André">
             <text>
                 <h1>Prof. Dr. André Hekermann Buss</h1>
-                <h3>Pré-candidato à Diretor UTFPR-PG</h3>
+                <h3>Candidato à Diretor UTFPR-PG</h3>
             </text>
         </introduction>
         
@@ -48,7 +50,9 @@
         </slogan>
         
         <about id="about">
-            <h1>Sobre Mim</h1>
+            <div class="about-me">
+                <h1>Sobre Mim</h1>
+            </div>
             <div class="columns">
                 <div class="column">
                     <i data-lucide="circle-user-round" id="column-top-svg"></i>
@@ -92,22 +96,22 @@
         <professional-history>
             
                 <h1>Histórico Profissional</h1>
-                <h3>Ensino e Indústria</h3>
+                <h2>Ensino e Indústria</h2>
             
             <div id="logos-wrapper">
             <logos id="logos-container">
-                <img src="assets/images/logo-utfpr-branca.png" width="160px" height="120px" alt="UTFPR">
+                <img src="assets/images/logo-utfpr.png" width="150px" height="50px" alt="UTFPR">
                 <img src="assets/images/logo-unicesumar.png" width="290px" height="120px" alt="Unicesumar">
                 <img src="assets/images/logo-unisa.png" width="150px" height="50px" alt="Unisa">
-                <img src="assets/images/logo-senai.png" width="170px" height="120px" alt="Senai">
+                <img src="assets/images/logo-senai.png" width="190px" height="120px" alt="Senai">
                 <img src="assets/images/logo-noma.png" width="150px" height="50px" alt="NOMA do Brasil">
                 <img src="assets/images/logo-millenium.png" width="200px" height="50px" alt="Distribuidora Millenium">
-                <img src="assets/images/logo-ecologic.png" width="250px" height="150px" alt="Ecologic">
+                <img src="assets/images/logo-ecologic.png" id="ecologic" width="250px" height="150px" alt="Ecologic">
             </logos>
         </div>
 
-            <h3>Experiência Internacional</h3>
-            <img src="assets/images/logo-ecologic.png" width="250px" height="150px" alt="Ecologic">
+            <h2>Experiência Internacional</h2>
+            <img src="assets/images/logo-kelly.png" width="220px" height="120px" alt="Kelly Broadcaster">
         </professional-history>
 
         <courses>
@@ -128,7 +132,7 @@
             </text>
         
             <div class="image-container">
-                <img src="https://i1.rgstatic.net/ii/profile.image/1180712434700289-1658515189063_Q512/Andre-Hekermann-Buss.jpg" alt="Foto André">
+                <img src="assets/images/andre.png" alt="Foto André">
             </div>
         </courses>
 
@@ -136,9 +140,16 @@
             
         </award>
 
-        
+        <footer>
+            
+
+            <footer-copyright>
+                &#169
+                2025 Todos os direitos reservados
+            </footer-copyright>
+        </footer>
     </form>
 
-   
+    
 </body>
 </html>

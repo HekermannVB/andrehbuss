@@ -423,6 +423,23 @@ footer-copyright {
     menu {
         display: flex !important;
     }
+
+    menu square svg {
+        stroke: #1E1E1E;
+        width: 30px;
+        height: 30px;
+        transition: 0.3s;
+    }
+
+    menu square:hover {
+        svg {
+            stroke: #A3A3A3;
+        }
+    }
+
+    info {
+        display: none;
+    }
     
     links {
         display: none !important;
